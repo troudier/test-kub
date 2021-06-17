@@ -1,9 +1,7 @@
 resources:
     - ./resources/namespace.yml
     - ./resources/configmap.yml
-    - ./resources/sso.yml
-    - ./resources/api.yml
-    - ./resources/ui.yml
+    - ./resources/deployment.yml
     
       
 configMapGenerator:

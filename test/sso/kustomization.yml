@@ -1,0 +1,30 @@
+namePrefix: upsell-crm-
+nameSuffix:  -test
+namespace: upsell-crm-test
+
+resources:
+  - ../../base/
+  
+images:
+    - name: appname
+      newName: rg.fr-par.scw.cloud/azko-upsell/crm-api
+      newTag: latest
+
+    - name: api
+      newName: rg.fr-par.scw.cloud/azko-upsell/crm-api
+      newTag: latest
+      
+    - name: ui
+      newName: rg.fr-par.scw.cloud/azko-upsell/crm-ui
+      newTag: latest
+      
+      
+#transformers:
+#- |-
+#  apiVersion: builtin
+#  kind: PrefixSuffixTransformer
+#  metadata:
+#    name: myFancyNamePrefixer
+#  prefix: bob-
+#  fieldSpecs:
+#  - path: metadata/name
