@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: configuration
+  name: sso-configuration
 data:
   crm_db_config: |
     MYSQL_DATABASE: db
