@@ -12,6 +12,7 @@ images:
       
 configMapGenerator:
 - name: api-configuration
+  behavior: replace
   literals:
   - APP_VERSION="$BUILD_SOURCEBRANCH"-"$BUILD_ID"
   options:
