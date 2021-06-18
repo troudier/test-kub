@@ -3,7 +3,7 @@ nameSuffix:  -test
 namespace: upsell-crm-test
 
 resources:
-  - ../../base/sso
+  - ../../base/sso/
   
 images:
     - name: sso
