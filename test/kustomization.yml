@@ -2,5 +2,5 @@ resources:
   - ./api/
   - ./sso/
   - ./ui/ 
-  - ../base/resources/namespace.yml
+  - ./resources/namespace.yml
   
