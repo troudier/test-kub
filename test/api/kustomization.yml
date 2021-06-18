@@ -15,6 +15,7 @@ configMapGenerator:
   behavior: replace
   literals:
   - APP_VERSION="$BUILD_SOURCEBRANCH"-"$BUILD_ID"
+  - PARAM2=val2
   options:
     disableNameSuffixHash: true
     
