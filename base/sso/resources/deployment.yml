@@ -1,29 +1,29 @@
-appnameVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: appname
+  name: sso
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: appname
+      app: sso
   template:
     metadata:
       labels:
-        app: appname
+        app: sso
     spec:
       containers:
-        - name: appname
-          image: appname
+        - name: sso
+          image: sso
           ports:
           - containerPort: 80
       imagePullSecrets:
         - name: registry-secret
 ---
-appnameVersion: v1
+apiVersion: v1
 kind: Service
 metadata:
-  name: appname
+  name: sso
 spec:
   ports:
   - port: 80
@@ -31,4 +31,4 @@ spec:
     protocol: TCP
     name: http
   selector:
-    app: appname
+    app: sso

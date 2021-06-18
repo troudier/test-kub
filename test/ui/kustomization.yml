@@ -1,13 +1,12 @@
 namePrefix: upsell-crm-
-name: ui
 nameSuffix:  -test
 namespace: upsell-crm-test
 
 resources:
-  - ../../base/
+  - ../../base/ui/
   
 images:
-    - name: appname
+    - name: ui
       newName: rg.fr-par.scw.cloud/azko-upsell/crm-ui
       newTag: develop-latest
       
