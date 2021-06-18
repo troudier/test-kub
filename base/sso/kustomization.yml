@@ -1,7 +1,13 @@
 resources:
     - ./resources/configmap.yml
     - ./resources/deployment.yml
-    
+ 
+configMapGenerator:
+- name: sso-configuration
+  literals:
+  - APP_VERSION=$BUILD_SOURCEBRANCH
+  options:
+    disableNameSuffixHash: true
       
 #configMapGenerator:
 #- name: configuration-sso

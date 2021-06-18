@@ -7,8 +7,6 @@ configMapGenerator:
 - name: api-configuration
   literals:
   - APP_VERSION=$BUILD_SOURCEBRANCH
-  - PARAM1=val1
-  - PARAM2=val1
   options:
     disableNameSuffixHash: true
     

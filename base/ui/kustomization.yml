@@ -1,5 +1,4 @@
 resources:
-    - ./resources/configmap.yml
     - ./resources/deployment.yml
     - ./resources/ingress-route.yml
     
