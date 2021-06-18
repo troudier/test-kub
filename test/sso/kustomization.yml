@@ -8,7 +8,7 @@ resources:
 images:
     - name: sso
       newName: rg.fr-par.scw.cloud/azko-upsell/test-sso
-      newTag: $(BUILD_SOURCEBRANCH)-$(BUILD_ID)
+      newTag: $(BUILD_SOURCEBRANCHNAME)-$(BUILD_ID)
       
       
 configMapGenerator:
@@ -16,6 +16,6 @@ configMapGenerator:
   behavior: merge
   literals:
   - APP_ENV=test
-  - APP_VERSION=$BUILD_SOURCEBRANCH
+  - APP_VERSION=$(BUILD_SOURCEBRANCHNAME)
   options:
     disableNameSuffixHash: true
