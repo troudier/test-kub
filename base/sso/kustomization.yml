@@ -7,7 +7,6 @@ configMapGenerator:
   literals:
   - APP_VERSION=version
   - APP_ENV=env
-  - 
   options:
     disableNameSuffixHash: true
       
