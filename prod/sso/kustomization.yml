@@ -1,6 +1,6 @@
 namePrefix: upsell-crm-
-nameSuffix:  -test
-namespace: upsell-crm-test
+nameSuffix:  -prod
+namespace: upsell-crm-prod
 
 resources:
   - ../../base/sso/
@@ -8,7 +8,7 @@ resources:
 images:
     - name: sso
       newName: rg.fr-par.scw.cloud/azko-upsell/crm-sso
-      newTag: develop-latest
+      newTag: latest
       
       
 #transformers:
