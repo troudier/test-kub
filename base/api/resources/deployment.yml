@@ -18,9 +18,9 @@ spec:
           ports:
             - containerPort: 80
           envFrom:
-        # The ConfigMap we want to use
-        - configMapRef:
-            name: api-configuration
+            # The ConfigMap we want to use
+            - configMapRef:
+                name: api-configuration
           env:
             - 
       imagePullSecrets:
