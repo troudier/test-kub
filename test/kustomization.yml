@@ -1,3 +1,6 @@
+namespace: upsell-crm-test
+
+
 resources:
   - ./api/
   - ./sso/
