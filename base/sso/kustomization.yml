@@ -5,7 +5,9 @@ resources:
 configMapGenerator:
 - name: sso-configuration
   literals:
-  - APP_VERSION=$BUILD_SOURCEBRANCH
+  - APP_VERSION=version
+  - APP_ENV=env
+  - 
   options:
     disableNameSuffixHash: true
       

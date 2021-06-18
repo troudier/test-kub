@@ -8,7 +8,7 @@ resources:
 images:
     - name: sso
       newName: rg.fr-par.scw.cloud/azko-upsell/test-sso
-      newTag: $BUILD_SOURCEBRANCH-$BUILD_ID
+      newTag: $(BUILD_SOURCEBRANCH)-$(BUILD_ID)
       
       
 configMapGenerator:
