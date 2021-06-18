@@ -10,7 +10,13 @@ images:
       newName: rg.fr-par.scw.cloud/azko-upsell/crm-api
       newTag: develop-latest
       
-      
+configMapGenerator:
+- name: api-configuration
+  literals:
+  - APP_VERSION="$BUILD_SOURCEBRANCH"-"$BUILD_ID"
+  options:
+    disableNameSuffixHash: true
+    
 #transformers:
 #- |-
 #  apiVersion: builtin
