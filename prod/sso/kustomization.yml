@@ -3,11 +3,11 @@ nameSuffix:  -test
 namespace: upsell-crm-test
 
 resources:
-  - ../../base/api/
+  - ../../base/sso/
   
 images:
-    - name: api
-      newName: rg.fr-par.scw.cloud/azko-upsell/crm-api
+    - name: sso
+      newName: rg.fr-par.scw.cloud/azko-upsell/crm-sso
       newTag: develop-latest
       
       

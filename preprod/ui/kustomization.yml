@@ -1,14 +1,14 @@
 namePrefix: upsell-crm-
-nameSuffix:  -test
-namespace: upsell-crm-test
+nameSuffix:  -preprod
+namespace: upsell-crm-preprod
 
 resources:
-  - ../../base/api/
+  - ../../base/ui/
   
 images:
-    - name: api
-      newName: rg.fr-par.scw.cloud/azko-upsell/crm-api
-      newTag: develop-latest
+    - name: ui
+      newName: rg.fr-par.scw.cloud/azko-upsell/crm-ui
+      newTag: preprod-latest
       
       
 #transformers:
