@@ -1,8 +1,7 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: testcoffee
-  namespace: default
+  name: sso
 spec:
   entryPoints:
     - websecure
@@ -10,7 +9,7 @@ spec:
     - match: Host(`$DOMAIN`)
       kind: Rule
       services:
-        - name: ui
+        - name: sso
           port: 80
   tls:
-    secretName: teacoffee-cert
+    secretName: sso-cert
