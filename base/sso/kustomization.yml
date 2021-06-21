@@ -5,7 +5,7 @@ configMapGenerator:
 - name: sso-configuration
   literals:
   - APP_VERSION=$APP_VERSION
-  - APP_ENV=env
+  - APP_ENV=$APP_ENV
   options:
     disableNameSuffixHash: true
       
