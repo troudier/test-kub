@@ -2,7 +2,6 @@ namespace: upsell-crm-test
 
 components:
   - ../../components/database/
-  - ./resources/ingress-route.yml
 
 resources:
   - ./api/
