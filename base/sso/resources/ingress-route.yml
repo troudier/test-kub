@@ -12,4 +12,5 @@ spec:
         - name: sso
           port: 80
   tls:
-    secretName: sso-cert
+    resolver: myresolver
+#    secretName: sso-cert
