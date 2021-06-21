@@ -9,8 +9,7 @@ configMapGenerator:
     
 secretGenerator:
 - name: api-secret
-  envs:
-  - ./resources/.env.secret
+  env: ./resources/.env.secret
   type: Opaque
   options:
     disableNameSuffixHash: true    

@@ -14,15 +14,3 @@ secretGenerator:
   type: Opaque
   options:
     disableNameSuffixHash: true
-#configMapGenerator:
-#- name: configuration-sso
-#  literals:
-#  - JAVA_HOME=/opt/java/jdk
-#  - JAVA_TOOL_OPTIONS=-agentlib:hprof  
-#  options:
-#    disableNameSuffixHash: true
-#    annotations:
-#      dashboard: "1"
-#    labels:
-#        test: plop
-#transformers:
