@@ -3,8 +3,7 @@ resources:
  
 configMapGenerator:
 - name: sso-configuration
-  env: 
-    - ./resources/.env
+  env: ./resources/.env
   options:
     disableNameSuffixHash: true
       
