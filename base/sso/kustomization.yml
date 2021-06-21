@@ -3,9 +3,8 @@ resources:
  
 configMapGenerator:
 - name: sso-configuration
-  literals:
-  - APP_VERSION
-  - APP_ENV
+  env: 
+    - ./resources.env
   options:
     disableNameSuffixHash: true
       
