@@ -11,5 +11,5 @@ spec:
       services:
         - name: upsell-crm-sso-test
           port: 80
-#  tls:
-#    secretName: sso-cert
+  tls:
+    secretName: sso-cert
