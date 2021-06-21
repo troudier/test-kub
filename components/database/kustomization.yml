@@ -3,3 +3,10 @@ kind: Component
 
 resources:
     - ./resources/deployment.yml
+    
+configMapGenerator:
+- name: database-configuration
+  behavior: merge
+  env: ./resources/.env
+  options:
+    disableNameSuffixHash: true
