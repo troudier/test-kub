@@ -5,10 +5,8 @@ resources:
       
 configMapGenerator:
 - name: api-configuration
-  literals:
-  - APP_VERSION=$BUILD_SOURCEBRANCH
+  env: ./resources/.env
   options:
     disableNameSuffixHash: true
-    
     
 #transformers:
