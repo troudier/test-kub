@@ -23,8 +23,6 @@ spec:
                 name: api-configuration
             - secretRef:
                 name: api-secret
-          env:
-            - 
           imagePullPolicy: Always
       imagePullSecrets:
         - name: registry-secret
