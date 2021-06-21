@@ -3,15 +3,23 @@ nameSuffix:  -test
 namespace: upsell-crm-test
 
 resources:
-  - ../../base/ui/
+  - ../../../base/api/
   
 images:
-    - name: ui
-      newName: rg.fr-par.scw.cloud/azko-upsell/test-ui
+    - name: api
+      newName: rg.fr-par.scw.cloud/azko-upsell/test-api
       newTag: develop-latest
-#      newTag: $(BUILD_SOURCEBRANCH)-$(BUILD_ID)
       
-      
+configMapGenerator:
+- name: api-configuration
+  behavior: merge
+  literals:
+  - APP_ENV=test
+  - APP_VERSION=$BUILD_SOURCEBRANCH-$BUILD_ID
+  - PARAM2=val2
+  options:
+    disableNameSuffixHash: true
+    
 #transformers:
 #- |-
 #  apiVersion: builtin
