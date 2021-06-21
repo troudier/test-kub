@@ -7,4 +7,11 @@ configMapGenerator:
   options:
     disableNameSuffixHash: true
     
+secretGenerator:
+- name: api-secret
+  envs:
+  - ./resources/.env.secret
+  type: Opaque
+  options:
+    disableNameSuffixHash: true    
 #transformers:

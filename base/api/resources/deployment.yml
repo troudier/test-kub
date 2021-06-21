@@ -21,6 +21,8 @@ spec:
             # The ConfigMap we want to use
             - configMapRef:
                 name: api-configuration
+            - secretRef:
+                name: api-secret
           env:
             - 
       imagePullSecrets:

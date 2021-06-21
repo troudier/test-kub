@@ -22,7 +22,7 @@ spec:
             - configMapRef:
                 name: sso-configuration
             - secretRef:
-                name: database-secret
+                name: sso-secret
       imagePullSecrets:
         - name: registry-secret
 ---
