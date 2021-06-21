@@ -4,13 +4,12 @@ metadata:
   name: sso
 spec:
   entryPoints:
-    - websecure
+    - web
   routes:
     - match: Host(`$DOMAIN`)
       kind: Rule
       services:
         - name: sso
           port: 80
-  tls:
-    resolver: myresolver
+#  tls:
 #    secretName: sso-cert
