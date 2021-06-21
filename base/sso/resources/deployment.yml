@@ -21,6 +21,8 @@ spec:
             # The ConfigMap we want to use
             - configMapRef:
                 name: sso-configuration
+            - secretRef:
+                name: database-secret
       imagePullSecrets:
         - name: registry-secret
 ---
