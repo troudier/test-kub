@@ -7,7 +7,7 @@ resources:
   
 images:
     - name: api
-      newName: rg.fr-par.scw.cloud/azko-upsell/crm-api
+      newName: rg.fr-par.scw.cloud/azko-upsell/test-api
       newTag: develop-latest
       
 configMapGenerator:
