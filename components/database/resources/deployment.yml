@@ -17,6 +17,11 @@ spec:
           image: mysql
           ports:
           - containerPort: 3306
+          envFrom:
+            - configMapRef:
+                name: database-configuration
+            - secretRef:
+                name: database-secret
 ---
 apiVersion: v1
 kind: Service
