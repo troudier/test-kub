@@ -17,6 +17,7 @@ configMapGenerator:
 - name: sso-configuration
   behavior: merge
   literals:
+      - APP_ENV=$APP_ENV
 #  - APP_ENV=test
 #  - APP_VERSION=demo
 #  - APP_VERSION=$BUILD_SOURCEBRANCHNAME
