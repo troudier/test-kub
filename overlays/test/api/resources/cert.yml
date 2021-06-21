@@ -1,11 +1,11 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: teacoffee-cert
+  name: api-cert
   namespace: default
 spec:
   commonName: $DOMAIN
-  secretName: teacoffee-cert
+  secretName: api-cert
   dnsNames:
     - $DOMAIN
   issuerRef:
