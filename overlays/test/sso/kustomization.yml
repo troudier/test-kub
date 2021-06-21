@@ -24,12 +24,3 @@ configMapGenerator:
   options:
     disableNameSuffixHash: true
     
-configMapGenerator:
-- name: database-configuration
-  behavior: merge
-  literals:
-#  - APP_ENV=test
-#  - APP_VERSION=demo
-#  - APP_VERSION=$BUILD_SOURCEBRANCHNAME
-  options:
-    disableNameSuffixHash: true
