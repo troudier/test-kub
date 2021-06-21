@@ -17,6 +17,7 @@ configMapGenerator:
   behavior: merge
   literals:
   - APP_ENV=test
-  - APP_VERSION=$BUILD_SOURCEBRANCHNAME
+  - APP_VERSION=demo
+#  - APP_VERSION=$BUILD_SOURCEBRANCHNAME
   options:
     disableNameSuffixHash: true
