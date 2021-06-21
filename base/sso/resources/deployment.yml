@@ -23,7 +23,7 @@ spec:
                 name: sso-configuration
             - secretRef:
                 name: sso-secret
-      imagePullPolicy: Always
+          imagePullPolicy: Always
       imagePullSecrets:
         - name: registry-secret
 ---
