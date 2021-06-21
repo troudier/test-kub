@@ -1,15 +1,15 @@
 apiVersion: traefik.containo.us/v1alpha1
 kind: IngressRoute
 metadata:
-  name: api
+  name: ui
 spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`$(DOMAIN)`)
+    - match: Host(`$DOMAIN`)
       kind: Rule
       services:
-        - name: api
+        - name: ui
           port: 80
   tls:
-    secretName: api-cert
+    secretName: ui-cert
