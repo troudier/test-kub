@@ -9,7 +9,7 @@ resources:
 images:
     - name: api
       newName: rg.fr-par.scw.cloud/azko-upsell/$IMAGE_NAME
-      newTag: $IMAGE_TAG
+      newTag: develop-latest
       
 configMapGenerator:
 - name: api-configuration
