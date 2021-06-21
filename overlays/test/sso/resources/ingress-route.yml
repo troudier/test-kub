@@ -4,7 +4,7 @@ metadata:
   name: sso
 spec:
   entryPoints:
-    - web
+    - websecure
   routes:
     - match: Host(`$DOMAIN`)
       kind: Rule
