@@ -13,5 +13,5 @@ configMapGenerator:
 secretGenerator:
 - name: env_file_secret
   envs:
-  - .secrets
+  - ./resources/.secrets
   type: Opaque
