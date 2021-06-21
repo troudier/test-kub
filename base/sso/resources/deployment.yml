@@ -16,7 +16,11 @@ spec:
         - name: sso
           image: sso
           ports:
-          - containerPort: 80
+            - containerPort: 80
+          envFrom:
+            # The ConfigMap we want to use
+            - configMapRef:
+                name: sso-configuration
       imagePullSecrets:
         - name: registry-secret
 ---

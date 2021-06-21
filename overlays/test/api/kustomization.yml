@@ -4,6 +4,7 @@ namespace: upsell-crm-test
 
 resources:
   - ../../../base/api/
+  - ./resources/ingress-route.yml
   
 images:
     - name: api

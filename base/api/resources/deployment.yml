@@ -25,10 +25,10 @@ spec:
             - 
       imagePullSecrets:
         - name: registry-secret
-      volumes:
-        - name: config
-          configMap:
-            name: api-configuration
+#      volumes:
+#        - name: config
+#          configMap:
+#            name: api-configuration
 ---
 apiVersion: v1
 kind: Service
