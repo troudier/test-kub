@@ -1,6 +1,5 @@
 resources:
     - ./resources/deployment.yml
-    - ./resources/ingress-route.yml
  
 configMapGenerator:
 - name: sso-configuration

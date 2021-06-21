@@ -4,6 +4,7 @@ namespace: upsell-crm-test
 
 resources:
   - ../../../base/sso/
+  - ./resources/ingress-route.yml
   
 images:
     - name: sso

@@ -9,7 +9,7 @@ spec:
     - match: Host(`$DOMAIN`)
       kind: Rule
       services:
-        - name: sso
+        - name: upsell-crm-sso-test
           port: 80
 #  tls:
 #    secretName: sso-cert
