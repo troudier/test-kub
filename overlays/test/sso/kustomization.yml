@@ -30,7 +30,6 @@ configMapGenerator:
 configMapGenerator:
 - name: database-configuration
   behavior: merge
-  env: ./resources/.env
   literals:
 #  - APP_ENV=test
 #  - APP_VERSION=demo
