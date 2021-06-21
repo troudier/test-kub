@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   commonName: $DOMAIN
-  secretName: teacoffee-cert
+  secretName: ui-cert-test
   dnsNames:
     - $DOMAIN
   issuerRef:

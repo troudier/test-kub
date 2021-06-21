@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   commonName: $DOMAIN
-  secretName: api-cert
+  secretName: api-cert-test
   dnsNames:
     - $DOMAIN
   issuerRef:
