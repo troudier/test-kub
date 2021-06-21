@@ -11,7 +11,9 @@ configMapGenerator:
     disableNameSuffixHash: true
 
 secretGenerator:
-- name: env_file_secret
+- name: database-secrets
   envs:
   - ./resources/.secrets
   type: Opaque
+  options:
+    disableNameSuffixHash: true
