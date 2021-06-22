@@ -6,6 +6,6 @@ nameSuffix:  -test
 namespace: upsell-crm-test
 
 resources:
-  - ../../components/database/
+  - ../../../components/database/
 
   
