@@ -10,8 +10,8 @@ resources:
   
 images:
     - name: ui
-      newName: rg.fr-par.scw.cloud/azko-upsell/test-ui
-      newTag: develop-latest
+      newName: rg.fr-par.scw.cloud/azko-upsell/$UI_IMAGE
+      newTag: $UI_IMAGE_TAG
 #      newTag: $(BUILD_SOURCEBRANCH)-$(BUILD_ID)
       
       
