@@ -25,7 +25,19 @@ patches:
           claimName: database-credentials-pvc  
   target:
     kind: Deployment
-      
+    name: sso
+
+- patch: |-
+    - op: replace
+      path: /spec/template/spec/volumes/0
+      value:
+        name: database-credentials-storage
+        persistentVolumeClaim:
+          claimName: database-credentials-pvc  
+  target:
+    kind: Job
+    name: sso-update
+
 configMapGenerator:
 - name: sso-configuration
   behavior: merge

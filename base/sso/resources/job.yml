@@ -14,5 +14,11 @@ spec:
             name: sso-configuration
         - secretRef:
             name: sso-secret
+        volumeMounts:
+            - name: database-credentials-storage
+              mountPath: /var/lib/mysql
+      volumes:
+        - name: database-credentials-storage
+          emptyDir: {}
       restartPolicy: Never
   backoffLimit: 4
