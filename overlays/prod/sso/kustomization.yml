@@ -3,20 +3,21 @@ nameSuffix:  -prod
 namespace: upsell-crm-prod
 
 resources:
-  - ../../base/sso/
+  - ../../../base/sso/
+  - ./resources/cert.yml
+  - ./resources/ingress-route.yml
+  
   
 images:
     - name: sso
-      newName: rg.fr-par.scw.cloud/azko-upsell/crm-sso
-      newTag: latest
+      newName: rg.fr-par.scw.cloud/azko-upsell/$SSO_IMAGE
+      newTag: $SSO_IMAGE_TAG
       
       
-#transformers:
-#- |-
-#  apiVersion: builtin
-#  kind: PrefixSuffixTransformer
-#  metadata:
-#    name: myFancyNamePrefixer
-#  prefix: bob-
-#  fieldSpecs:
-#  - path: metadata/name
+configMapGenerator:
+- name: sso-configuration
+  behavior: merge
+  env: ./resources/.env
+  options:
+    disableNameSuffixHash: true
+    

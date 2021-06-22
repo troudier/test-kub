@@ -3,10 +3,10 @@ kind: Certificate
 metadata:
   name: sso-cert
 spec:
-  commonName: sso-test.azko.app
-  secretName: sso-cert-test
+  commonName: sso.azko.app
+  secretName: sso-cert-prod
   dnsNames:
-    - sso-test.azko.app
+    - sso.azko.app
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer

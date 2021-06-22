@@ -12,15 +12,3 @@ images:
     - name: ui
       newName: rg.fr-par.scw.cloud/azko-upsell/$UI_IMAGE
       newTag: $UI_IMAGE_TAG
-#      newTag: $(BUILD_SOURCEBRANCH)-$(BUILD_ID)
-      
-      
-#transformers:
-#- |-
-#  apiVersion: builtin
-#  kind: PrefixSuffixTransformer
-#  metadata:
-#    name: myFancyNamePrefixer
-#  prefix: bob-
-#  fieldSpecs:
-#  - path: metadata/name

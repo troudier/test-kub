@@ -10,19 +10,14 @@ resources:
   
 images:
     - name: sso
-      newName: rg.fr-par.scw.cloud/azko-upsell/test-sso
-      newTag: develop-latest
-#      newTag: $BUILD_SOURCEBRANCHNAME-$BUILD_BUILDID
+      newName: rg.fr-par.scw.cloud/azko-upsell/$SSO_IMAGE
+      newTag: $SSO_IMAGE_TAG
       
       
 configMapGenerator:
 - name: sso-configuration
   behavior: merge
   env: ./resources/.env
-  literals:
-#  - APP_ENV=test
-#  - APP_VERSION=demo
-#  - APP_VERSION=$BUILD_SOURCEBRANCHNAME
   options:
     disableNameSuffixHash: true
     

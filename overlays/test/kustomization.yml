@@ -1,7 +1,7 @@
 namespace: upsell-crm-test
 
 components:
-  - ../../components/database/
+  - ./database/
 
 resources:
   - ./api/

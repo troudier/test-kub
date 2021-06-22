@@ -8,24 +8,13 @@ resources:
   
 images:
     - name: api
-      newName: rg.fr-par.scw.cloud/azko-upsell/test-api
-      newTag: develop-latest
+      newName: rg.fr-par.scw.cloud/azko-upsell/$API_IMAGE
+      newTag: $API_IMAGE_TAG
       
 configMapGenerator:
 - name: api-configuration
   behavior: merge
   env: ./resources/.env
-  literals:
-  - PARAM2=val2
   options:
     disableNameSuffixHash: true
     
-#transformers:
-#- |-
-#  apiVersion: builtin
-#  kind: PrefixSuffixTransformer
-#  metadata:
-#    name: myFancyNamePrefixer
-#  prefix: bob-
-#  fieldSpecs:
-#  - path: metadata/name

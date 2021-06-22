@@ -1,0 +1,15 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: api
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`api.azko.app`)
+      kind: Rule
+      services:
+        - name: upsell-crm-api-prod
+          port: 80
+  tls:
+    secretName: api-cert-test

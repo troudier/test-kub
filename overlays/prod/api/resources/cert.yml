@@ -1,12 +1,13 @@
 apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
-  name: sso-cert
+  name: api-cert
+  namespace: default
 spec:
-  commonName: sso-test.azko.app
-  secretName: sso-cert-test
+  commonName: api.azko.app
+  secretName: api-cert-prod
   dnsNames:
-    - sso-test.azko.app
+    - api.azko.app
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer

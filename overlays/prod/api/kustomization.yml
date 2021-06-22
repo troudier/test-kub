@@ -3,20 +3,18 @@ nameSuffix:  -prod
 namespace: upsell-crm-prod
 
 resources:
-  - ../../base/api/
+  - ../../../base/api/
+  - ./resources/ingress-route.yml
   
 images:
     - name: api
-      newName: rg.fr-par.scw.cloud/azko-upsell/crm-api
-      newTag: latest
+      newName: rg.fr-par.scw.cloud/azko-upsell/$API_IMAGE
+      newTag: $API_IMAGE_TAG
       
-      
-#transformers:
-#- |-
-#  apiVersion: builtin
-#  kind: PrefixSuffixTransformer
-#  metadata:
-#    name: myFancyNamePrefixer
-#  prefix: bob-
-#  fieldSpecs:
-#  - path: metadata/name
+configMapGenerator:
+- name: api-configuration
+  behavior: merge
+  env: ./resources/.env
+  options:
+    disableNameSuffixHash: true
+    
