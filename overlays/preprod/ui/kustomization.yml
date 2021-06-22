@@ -3,20 +3,12 @@ nameSuffix:  -preprod
 namespace: upsell-crm-preprod
 
 resources:
-  - ../../base/ui/
+  - ../../../base/ui/
+  - ./resources/cert.yml
+  - ./resources/ingress-route.yml
+  
   
 images:
     - name: ui
-      newName: rg.fr-par.scw.cloud/azko-upsell/crm-ui
-      newTag: preprod-latest
-      
-      
-#transformers:
-#- |-
-#  apiVersion: builtin
-#  kind: PrefixSuffixTransformer
-#  metadata:
-#    name: myFancyNamePrefixer
-#  prefix: bob-
-#  fieldSpecs:
-#  - path: metadata/name
+      newName: rg.fr-par.scw.cloud/azko-upsell/$UI_IMAGE
+      newTag: $UI_IMAGE_TAG

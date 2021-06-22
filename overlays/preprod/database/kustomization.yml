@@ -1,0 +1,20 @@
+namePrefix: upsell-crm-
+nameSuffix:  -preprod
+namespace: upsell-crm-preprod
+
+components:
+  - ../../../components/database/
+  
+resources:
+  - ./resources/volume-claim.yml
+  - ./resources/volume.yml
+  
+replacements:
+- source:
+    kind: Deployment
+    fieldPath: metadata.name
+  targets:
+  - select: 
+      name: my-resource
+
+  

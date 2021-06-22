@@ -3,10 +3,10 @@ kind: Certificate
 metadata:
   name: ui-cert
 spec:
-  commonName: upsell-test.azko.app
-  secretName: ui-cert-test
+  commonName: upsell-preprod.azko.app
+  secretName: ui-cert-preprod
   dnsNames:
-    - upsell-test.azko.app
+    - upsell-preprod.azko.app
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
