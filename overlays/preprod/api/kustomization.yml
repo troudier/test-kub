@@ -1,0 +1,21 @@
+namePrefix: upsell-crm-
+nameSuffix:  -preprod
+namespace: upsell-crm-preprod
+
+resources:
+  - ../../../base/api/
+  - ./resources/cert.yml
+  - ./resources/ingress-route.yml
+  
+images:
+    - name: api
+      newName: rg.fr-par.scw.cloud/azko-upsell/$API_IMAGE
+      newTag: $API_IMAGE_TAG
+      
+configMapGenerator:
+- name: api-configuration
+  behavior: merge
+  env: ./resources/.env
+  options:
+    disableNameSuffixHash: true
+    

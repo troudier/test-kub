@@ -1,0 +1,23 @@
+namePrefix: upsell-crm-
+nameSuffix:  -preprod
+namespace: upsell-crm-preprod
+
+resources:
+  - ../../../base/sso/
+  - ./resources/cert.yml
+  - ./resources/ingress-route.yml
+  
+  
+images:
+    - name: sso
+      newName: rg.fr-par.scw.cloud/azko-upsell/$SSO_IMAGE
+      newTag: $SSO_IMAGE_TAG
+      
+      
+configMapGenerator:
+- name: sso-configuration
+  behavior: merge
+  env: ./resources/.env
+  options:
+    disableNameSuffixHash: true
+    

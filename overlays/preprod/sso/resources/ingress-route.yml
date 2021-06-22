@@ -1,0 +1,15 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: sso
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`sso-preprod.azko.app`)
+      kind: Rule
+      services:
+        - name: upsell-crm-sso-preprod
+          port: 80
+  tls:
+    secretName: sso-cert-preprod
