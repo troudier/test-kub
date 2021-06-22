@@ -4,6 +4,7 @@ kind: Component
 
 resources:
     - ./resources/deployment.yml
+    - ./resources/volume.yml
     
 configMapGenerator:
 - name: database-configuration
