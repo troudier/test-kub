@@ -5,7 +5,7 @@ namePrefix: upsell-crm-
 nameSuffix:  -test
 namespace: upsell-crm-test
 
-resources:
+components:
   - ../../../components/database/
 
   
