@@ -9,10 +9,5 @@ spec:
       - name: api-update-job
         image: api
         command: ["php",  "bin/console", "-wle", "upsell:organisations:update-all"]
-        envFrom:
-        - configMapRef:
-            name: api-configuration
-        - secretRef:
-            name: api-secret
       restartPolicy: Never
   backoffLimit: 4
