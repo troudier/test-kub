@@ -17,4 +17,17 @@ replacements:
   - select: 
       name: my-resource
 
+patches:
+- patch: |-
+    - op: replace
+      path: /spec/template/spec/volumes/0
+      value:
+        name: mysql-storage
+        persistentVolumeClaim:
+        claimName: database-pvc  
+  target:
+    kind: Deployment
+      
+
+
   
