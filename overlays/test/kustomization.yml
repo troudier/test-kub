@@ -1,11 +1,9 @@
 namespace: upsell-crm-test
 
-components:
-  - ./database/
-
 resources:
   - ./api/
   - ./sso/
-  - ./ui/ 
+  - ./ui/
+  - ./database/
   - ./resources/namespace.yml
   
