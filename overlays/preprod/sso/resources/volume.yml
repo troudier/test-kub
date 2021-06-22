@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: database-credentials-pv
+spec:
+  storageClassName: ""
+  claimRef:
+    name: database-credentials-pvc

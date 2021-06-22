@@ -24,6 +24,12 @@ spec:
             - secretRef:
                 name: sso-secret
           imagePullPolicy: Always
+          volumeMounts:
+            - name: database-credentials-storage
+              mountPath: /var/lib/mysql
+      volumes:
+        - name: database-credentials-storage
+          emptyDir: {}
       imagePullSecrets:
         - name: registry-secret
 ---

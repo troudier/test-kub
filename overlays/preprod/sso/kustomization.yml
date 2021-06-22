@@ -6,13 +6,25 @@ resources:
   - ../../../base/sso/
   - ./resources/cert.yml
   - ./resources/ingress-route.yml
+  - ./resources/volume-claim.yml
+  - ./resources/volume.yml
   
   
 images:
     - name: sso
       newName: rg.fr-par.scw.cloud/azko-upsell/$SSO_IMAGE
       newTag: $SSO_IMAGE_TAG
-      
+
+patches:
+- patch: |-
+    - op: replace
+      path: /spec/template/spec/volumes/0
+      value:
+        name: database-credentials-storage
+        persistentVolumeClaim:
+          claimName: database-credentials-pvc  
+  target:
+    kind: Deployment
       
 configMapGenerator:
 - name: sso-configuration
