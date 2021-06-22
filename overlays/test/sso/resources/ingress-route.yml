@@ -6,7 +6,7 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`$DOMAIN`)
+    - match: Host(`sso-test.azko.app`)
       kind: Rule
       services:
         - name: upsell-crm-sso-test

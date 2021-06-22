@@ -4,10 +4,10 @@ metadata:
   name: ui-cert
   namespace: default
 spec:
-  commonName: $DOMAIN
+  commonName: upsell-test.azko.app
   secretName: ui-cert-test
   dnsNames:
-    - $DOMAIN
+    - upsell-test.azko.app
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer

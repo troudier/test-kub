@@ -6,10 +6,10 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`$(DOMAIN)`)
+    - match: Host(`api-test.azko.app`)
       kind: Rule
       services:
-        - name: api
+        - name: upsell-crm-api-test
           port: 80
   tls:
     secretName: api-cert-test

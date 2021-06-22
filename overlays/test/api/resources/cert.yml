@@ -4,10 +4,10 @@ metadata:
   name: api-cert
   namespace: default
 spec:
-  commonName: $DOMAIN
+  commonName: api-test.azko.app
   secretName: api-cert-test
   dnsNames:
-    - $DOMAIN
+    - api-test.azko.app
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer

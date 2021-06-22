@@ -4,10 +4,10 @@ metadata:
   name: sso-cert
   namespace: default
 spec:
-  commonName: $DOMAIN
+  commonName: sso-test.azko.app
   secretName: sso-cert-test
   dnsNames:
-    - $DOMAIN
+    - sso-test.azko.app
   issuerRef:
     name: letsencrypt-prod
     kind: ClusterIssuer
