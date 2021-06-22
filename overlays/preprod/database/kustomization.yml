@@ -24,7 +24,7 @@ patches:
       value:
         name: mysql-storage
         persistentVolumeClaim:
-        claimName: database-pvc  
+          claimName: database-pvc  
   target:
     kind: Deployment
       
