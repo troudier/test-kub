@@ -16,7 +16,7 @@ spec:
             name: sso-secret
         volumeMounts:
             - name: database-credentials-storage
-              mountPath: /var/lib/mysql
+              mountPath: $DATABASE_CREDENTIALS_PATH
       volumes:
         - name: database-credentials-storage
           emptyDir: {}
