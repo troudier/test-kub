@@ -8,7 +8,7 @@ spec:
       containers:
       - name: sso-update-job
         image: sso
-        command: ["php",  "bin/console", "-wle", "upsell:organisations:update-all"]
+        command: ["php",  "bin/console", "upsell:organisations:update-all"]
         envFrom:
         - configMapRef:
             name: sso-configuration
