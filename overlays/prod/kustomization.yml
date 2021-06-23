@@ -1,9 +1,8 @@
 namespace: upsell-crm-prod
 
-
 resources:
   - ./api/
   - ./sso/
-  - ./ui/ 
+  - ./ui/
   - ./resources/namespace.yml
   

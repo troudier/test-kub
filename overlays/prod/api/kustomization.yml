@@ -4,6 +4,7 @@ namespace: upsell-crm-prod
 
 resources:
   - ../../../base/api/
+  - ./resources/cert.yml
   - ./resources/ingress-route.yml
   
 images:
